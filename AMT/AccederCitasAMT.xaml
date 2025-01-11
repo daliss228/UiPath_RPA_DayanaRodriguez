@@ -1,0 +1,169 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AccederCitasAMT" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_UrlAMT" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AccederCitasAMT" sap:VirtualizedContainerService.HintSize="1856.6666666666667,933.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Accediendo AMT" sap:VirtualizedContainerService.HintSize="476,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Accediendo a la página de la AMT."</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:RetryScope DisplayName="Retry Scope - Acceder a página" sap:VirtualizedContainerService.HintSize="476,734" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:05">
+      <ui:RetryScope.ActivityBody>
+        <ActivityAction>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser - Citas multas AMT" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="434,532.6666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <uix:NCheckState DisplayName="Check App State - Carga de página" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="400,313.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Timeout="5" Version="V4">
+                  <uix:NCheckState.IfNotExists>
+                    <Throw sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_1">
+                      <InArgument x:TypeArguments="s:Exception">
+                        <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new Exception("No se ha podido acceder a la página de Consulta Citaciones AMT.")</CSharpValue>
+                      </InArgument>
+                    </Throw>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="servicios.axiscloud.ec/AutoServicio/inicio.jsp" CVScreenId="53551b7a-abd6-4845-8d27-79e4f9088c0d" CvElementArea="27, 407, 923, 60" CvType="InputBox" DesignTimeRectangle="29, 409, 918, 56" DesignTimeScaleFactor="1.5" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl id='filtro_busqueda' tag='SELECT' type='' class='form-select input-sm' aaname='Tipo de Búsqueda:' /&gt;" Guid="9a989694-3e8c-4468-ab1c-673086998283" InformativeScreenshot="82476bfb15583a3ed9ea1491999f2c40.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Servicios en Línea' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="53551b7a-abd6-4845-8d27-79e4f9088c0d" CvTextArea="27, 386, 171, 22" CvTextArgument="Tipo de Busqueda:" CvType="Text" DesignTimeRectangle="29, 380, 169, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' type='' class='' aaname='' check:innerText='Tipo de Búsqueda:' /&gt;" Guid="da6c4ecd-53ae-4d1f-b3cc-f3adcb643b8a" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-11, -11, 3862, 2110" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5wsKESc4MNuTUwAABP9JREFUWEftlltsVFUUhvfMdG5tRTRKRJ+IWoUEHzSpUaMEUVJnBgqdKS0EgmAiElEMTxL1RR4kBEV9qYWeXiARjYkhiESoU4ooUVQSIkhMVPACKp2ZWtE+gHL8/j37hNIUCsbHruTLmcvaa/17nbXXOWbMxmw0i9d7Jj6vzcQb2iriWe8auN5xHVTGGtpCsQbPef+PFicowSMkmQIr4R34Er52HIY8rIMZUA0mPneTi/AfjZ2aWGO7IdjN8DL8BOfAvwSnYQc8FM9a0S7aFZoWIiDEtQ4OQZBAAn6FffAWbIbtcAQGIfArwnMxV40rMpU83gRZby6cgCDoN7AaprK7am5LuKJhYwihMX67AdLwNvwJ8j8DG+TL1UUfxXAu7z7r1cL3oEBn4U2oCTe2mBg+wy2a3WTXseME14VwDAIRz8Pl3Q45wTh4DxTgH3iDqoznaqKjNFZ5A12KMR2+A8UowEyguq3OcwSjpIGAZvgLfgOVVEfNeY1uqlAiZ+PMgwGQiJ3cqqt0ey9q9t43eEmc18PKSKalxty7rso0d5nYgi0m1tRpuRwrV8L2RpsToA2lwHmMYBoikIjObp3Y3H0iUv/xwG2Z3tJdvu9rVxo8S+AZeBrunlDfMWI/BKZkcB+UQCJ6YQ2sggegCugfJ2rJMd/U7e4zs/b235juKa6Hk/BSbccRE23YFMVZyXXOFexbmBFvtFUrBxhm5YraE9Dj1gzlD3gX7oxlNWvYCMnEJNgNPvTD/WB3w241grV7LQ5EPJzIdpQDDDP1VCKn/7wXQf2kI30Sgk2Io3APWAFV0AVKLram88VKsAHlFM+2ByKC5lKnz0zm2nUErV9gdb1FE5ndqnXX8l8N3MrnGpgGrRDMC92aiRIwFwZc8p1wE5hMvuBCBmW1Ip6CQITmRd0ta3pNpre/gjX18CyshsdgHLgIOiW2mmrQF0AzRqySgC2g5CWwpc/0lNyy86ZnBA8aiVgBgYhjyabONAIeZ51uneIUYHGqpxBWrKGGv9BT9FO3/iMJOOgWfgbjhy8aavaYlR/LT4IVUdnc1VfrHRnI7CkpRh8sJHlopDiqZILbxrrXtBZ+kYCvQIv3QfVIC4daeFaLMdPWRwi0ItHYPkjT+Vc/utWv9Q73z+rtXzj/0N8hTpTzvtBIGLDWCTglATucgB/h9tEEzNl/2iz9wQ+nPiwsv+PVA4NV8zf7ElHZ1NmXaOzITH79C2NmvOa8LzQlZ+Zo6AUj/6AErIAzIBGv0P3xi4lI8XtqTyHC/+V7ni/6UzccGKAawRE7Dqnq2UzP3IVH1DZyeVTPgaCH1kqABpDKLwGDsAEmk6w6xXEcQhJ0ZJdB0HCnqMRiAi8nWL8LakWEGr2KipwXJXGUCmmgaarOB80R+emtagodbwfRg3DcBT0HP8N+2DuMT+B3kJ8abtGio34onG7RY/cJCEScIPn2SM7bxsjdxne9vHwOejbof724NOvhZVKc97r3bTNOByU4C0pwKWzydDdHjfUEA/sqtgysCM69jwiLPus30JuV3qKaqMz5dwVKSyUKEjHBBu4ptoGGksZzN+SHoO8LguSBKRgo6FL4AHaReBdV6EZEns9b+U2DbFI0q0l5kQdaKt9nHsn36RzHIEEvJNI9hSTXZGpPiWuJ78URz3l52nkhJl5ckCQezbYlwjkviZCIae40FXM2Ou8xGzOZMf8CIT+vic/6vCQAAAAASUVORK5CYII=" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="7950867ef82564aacf3d8e35b00851f5.jpg" Selector="&lt;html app='chrome.exe' url='https://servicios.axiscloud.ec/AutoServicio/inicio.jsp?ps_empresa=03&amp;amp;ps_accion=P55' /&gt;">
+                <uix:TargetApp.Url>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_UrlAMT</CSharpValue>
+                  </InArgument>
+                </uix:TargetApp.Url>
+              </uix:TargetApp>
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </ActivityAction>
+      </ui:RetryScope.ActivityBody>
+      <ui:RetryScope.Condition>
+        <ActivityFunc x:TypeArguments="x:Boolean" />
+      </ui:RetryScope.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:RetryScope>
+  </Sequence>
+</Activity>
