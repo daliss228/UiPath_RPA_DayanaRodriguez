@@ -2,6 +2,7 @@
   <x:Members>
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="out_EmailBodyInfracciones" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>654,756</sap:VirtualizedContainerService.HintSize>
@@ -110,7 +111,6 @@
       <Variable x:TypeArguments="x:String" Name="strEmail" />
       <Variable x:TypeArguments="x:String" Name="strApellido" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Citaciones" />
-      <Variable x:TypeArguments="x:String" Name="strEmailBodyInfracciones" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -250,10 +250,10 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">405,485</av:Point>
                       <av:Size x:Key="ShapeSize">110,70</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">460,555 460,600</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">460,555 460,620</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ConsultarCitasAMT - Invoke Workflow File (AMT\\ConsultarCitasAMT.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AMT\\ConsultarCitasAMT.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ConsultarCitasAMT - Invoke Workflow File (AMT\\ConsultarCitasAMT.xaml)" sap:VirtualizedContainerService.HintSize="338,145.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AMT\\ConsultarCitasAMT.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_UrlAMT">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">in_Config["UrlAMT"].ToString()</CSharpValue>
@@ -268,7 +268,7 @@
                         <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">dt_Citaciones</CSharpReference>
                       </OutArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="out_EmailBodyInfracciones">
-                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">strEmailBodyInfracciones</CSharpReference>
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">out_EmailBodyInfracciones</CSharpReference>
                       </OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                     <sap:WorkflowViewStateService.ViewState>
@@ -285,17 +285,17 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <av:Point x:Key="ShapeLocation">430,600</av:Point>
+                          <av:Point x:Key="ShapeLocation">430,620</av:Point>
                           <av:Size x:Key="ShapeSize">60,60</av:Size>
-                          <av:PointCollection x:Key="TrueConnector">490,630 620,630 620,675</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">490,650 620,650 620,695</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
                         <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">565,675</av:Point>
-                              <av:PointCollection x:Key="ConnectorLocation">620,745 620,775</av:PointCollection>
+                              <av:Point x:Key="ShapeLocation">565,695</av:Point>
+                              <av:PointCollection x:Key="ConnectorLocation">620,765 620,795</av:PointCollection>
                               <av:Size x:Key="ShapeSize">110,70</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -327,9 +327,9 @@
                             <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">565,775</av:Point>
+                                  <av:Point x:Key="ShapeLocation">565,795</av:Point>
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">620,845 620,875</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">620,865 620,895</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SendEmail - Invoke Workflow File (Utilitarios\\SendEmail.xaml)" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Utilitarios\\SendEmail.xaml">
@@ -346,7 +346,7 @@
                                   </InArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_EmailBodyMessage">
                                     <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19" xml:space="preserve">@"&lt;h1&gt;Estimado/a " + strNombre + " " + strApellido + @",&lt;/h1&gt;" +
-            strEmailBodyInfracciones
+            out_EmailBodyInfracciones
 + @"&lt;p&gt;Saludos,&lt;br&gt;RPA CITACIONES DE TRÁNSITO&lt;/p&gt;"</CSharpValue>
                                   </InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
@@ -360,7 +360,7 @@
                                 <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">565,875</av:Point>
+                                      <av:Point x:Key="ShapeLocation">565,895</av:Point>
                                       <av:Size x:Key="ShapeSize">110,70</av:Size>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
