@@ -4,6 +4,7 @@
     <x:Property Name="in_Identificacion" Type="InArgument(x:String)" />
     <x:Property Name="in_BDDTableNameAMT" Type="InArgument(x:String)" />
     <x:Property Name="in_Resultado" Type="InArgument(x:String)" />
+    <x:Property Name="in_Comentario" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -40,6 +41,7 @@
       <x:String>UiPath.Database</x:String>
       <x:String>UiPath.Database.Activities</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -91,9 +93,10 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InsertarResultadoEjecuciónBDD" sap:VirtualizedContainerService.HintSize="1545.3333333333333,776" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="InsertarResultadoEjecucionBDD" sap:VirtualizedContainerService.HintSize="1545.3333333333333,956" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -106,6 +109,36 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
+    <ui:MultipleAssign DisplayName="Multiple Assign - Validación longitud" sap:VirtualizedContainerService.HintSize="492,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">in_Resultado</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">in_Resultado.Length &gt; 200 ? in_Resultado.Substring(0, 200) : in_Resultado</CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">in_Comentario</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">in_Comentario.Length &gt; 200 ? in_Comentario.Substring(0, 200) : in_Comentario</CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
     <ui:RetryScope DisplayName="Retry Scope - Insertando BDD" sap:VirtualizedContainerService.HintSize="492,576.6666666666666" sap2010:WorkflowViewState.IdRef="RetryScope_1">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
@@ -141,7 +174,7 @@
               </ui:ExecuteQuery.Parameters>
               <ui:ExecuteQuery.Sql>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"UPDATE " + in_BDDTableNameAMT + " SET RESULTADO = '" + in_Resultado + "' WHERE IDENTIFICACION = '" + in_Identificacion + "'"</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">"UPDATE " + in_BDDTableNameAMT + " SET RESULTADO = '" + in_Resultado + "', COMENTARIO = '" + in_Comentario + "' WHERE IDENTIFICACION = '" + in_Identificacion + "'"</CSharpValue>
                 </InArgument>
               </ui:ExecuteQuery.Sql>
             </ui:ExecuteQuery>
