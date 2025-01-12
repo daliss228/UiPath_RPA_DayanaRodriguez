@@ -117,7 +117,7 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="scg:List(x:String)">
-                <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">new List&lt;string&gt; {"EmailAddressUserAdmins", "EmailAddressUserExperts", "UrlAMT", "UrlAMTDescarga"}</CSharpValue>
+                <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">new List&lt;string&gt; {"EmailAddressUserAdmins", "EmailAddressUserExperts", "UrlAMT", "UrlAMTDescarga", "BDDTableNameAMT"}</CSharpValue>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
@@ -129,11 +129,12 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
-                <CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52" xml:space="preserve">new Dictionary&lt;string, object&gt; {
+                <CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57" xml:space="preserve">new Dictionary&lt;string, object&gt; {
 	{"QueueName", "ClientesAMT"},
+	{"CredBDDConnectionString", "CredBDDConnectionString"},
 	{"LogMessage_GetTransactionDataError", "Error getting transaction data for Transaction Number: "},
-	{"ExScreenshotsFolderPath", System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"BANCO PICHINCHA\FINANZAS\UiPath_RPA_DayanaRodriguez\ARCHIVOS INTERMEDIOS\SCREENSHOTS")},
-	{"SalidaFolderPath", System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"BANCO PICHINCHA\FINANZAS\UiPath_RPA_DayanaRodriguez\ARCHIVOS SALIDA")}
+	{"ExScreenshotsFolderPath", System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"Documents\BANCO_PICHINCHA\UiPath_RPA_DayanaRodriguez\ARCHIVOS INTERMEDIOS\SCREENSHOTS")},
+	{"SalidaFolderPath", System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"Documents\BANCO_PICHINCHA\UiPath_RPA_DayanaRodriguez\ARCHIVOS SALIDA")}
 }</CSharpValue>
               </InArgument>
             </ui:AssignOperation.Value>
