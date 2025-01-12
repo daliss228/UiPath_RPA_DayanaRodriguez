@@ -113,7 +113,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ConsultarCitasAMT" sap:VirtualizedContainerService.HintSize="1730,1926.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ConsultarCitasAMT" sap:VirtualizedContainerService.HintSize="1730,1966.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strErrorLogin" />
     </Sequence.Variables>
@@ -129,13 +129,13 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser - Citas multas AMT " HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1730,1560" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser - Citas multas AMT " HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1730,1600" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Consulta" sap:VirtualizedContainerService.HintSize="1696,1308.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence DisplayName="Consulta" sap:VirtualizedContainerService.HintSize="1696,1348.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -265,14 +265,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <Parallel DisplayName="Parallel - Verificar estados" sap:VirtualizedContainerService.HintSize="1662,1074" sap2010:WorkflowViewState.IdRef="Parallel_1">
+            <Parallel DisplayName="Parallel - Verificar estados" sap:VirtualizedContainerService.HintSize="1662,1114" sap2010:WorkflowViewState.IdRef="Parallel_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState DisplayName="Check App State - Verificar Mensaje error" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="536,1001.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Timeout="2" Version="V3">
+              <uix:NCheckState DisplayName="Check App State - Verificar Mensaje error" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="536,1041.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Timeout="2" Version="V3">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="452,780" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <sap:WorkflowViewStateService.ViewState>
@@ -359,16 +359,16 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NCheckState>
-              <uix:NCheckState DisplayName="Check App State - Tabla citaciones" sap:VirtualizedContainerService.HintSize="1032,1001.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Timeout="10" Version="V3">
+              <uix:NCheckState DisplayName="Check App State - Tabla citaciones" sap:VirtualizedContainerService.HintSize="1032,1041.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Timeout="10" Version="V3">
                 <uix:NCheckState.IfExists>
-                  <Assign DisplayName="Target appear" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign DisplayName="Assign - Target appear" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">
                         <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">out_EmailBodyInfracciones</CSharpReference>
                       </OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">&lt;p&gt;No tiene citaciones de tránsito pendientes por pagar.&lt;/p&gt;</InArgument>
+                      <InArgument x:TypeArguments="x:String">No tiene citaciones pendientes.</InArgument>
                     </Assign.Value>
                   </Assign>
                 </uix:NCheckState.IfExists>
@@ -445,7 +445,7 @@
                 <uix:NCheckState.Target>
                   <uix:TargetAnchorable BrowserURL="servicios.axiscloud.ec/AutoServicio/inicio.jsp" CVScreenId="b7870faa-0700-4fe9-a763-60ccd1c46a3c" CvTextArea="1847, 587, 52, 21" CvTextArgument="$0.00" CvType="Text" DesignTimeRectangle="1850, 582, 50, 26" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='9' tag='STRONG' innertext='$0.00' aaname='$0.00' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='STRONG' innertext='$0.00' aaname='$0.00' class='' check:text='$0.00' /&gt;" Guid="65cd6292-3a48-43db-a4d4-b38fcb3bc607" InformativeScreenshot="670f2a590523f8ff67acd04f826531a5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Servicios en Línea' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                         <uix:Target CVScreenId="b7870faa-0700-4fe9-a763-60ccd1c46a3c" CvTextArea="981, 588, 177, 18" CvTextArgument="TOTAL PENDIENTE:" CvType="Text" DesignTimeRectangle="984, 580, 786, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='th_totalPendiente' tableRow='9' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='th_totalPendiente' type='' tag='TH' class='m-0 p-0 ' aaname='TOTAL PENDIENTE:' check:innerText='TOTAL PENDIENTE:' /&gt;" Guid="b7a61801-1ff3-4b28-bd92-d7d0c30c542a" SearchSteps="Selector, FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>

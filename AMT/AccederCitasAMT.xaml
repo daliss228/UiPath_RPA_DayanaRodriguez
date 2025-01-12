@@ -93,48 +93,57 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AccederCitasAMT" sap:VirtualizedContainerService.HintSize="1578,949.3733333333332" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AccederCitasAMT" sap:VirtualizedContainerService.HintSize="1545.3333333333333,1135.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - Accediendo AMT" sap:VirtualizedContainerService.HintSize="476,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+    <ui:LogMessage DisplayName="Log Message - Accediendo AMT" sap:VirtualizedContainerService.HintSize="526,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
-          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Accediendo a la página de la AMT."</CSharpValue>
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"Accediendo a la página de la AMT..."</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:RetryScope DisplayName="Retry Scope - Acceder a página" sap:VirtualizedContainerService.HintSize="476,734" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:05">
+    <ui:RetryScope DisplayName="Retry Scope - Acceder a página" sap:VirtualizedContainerService.HintSize="526,936" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:05">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser - Citas multas AMT" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="434,532.6666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser - Citas multas AMT" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,734.6666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <uix:NCheckState DisplayName="Check App State - Carga de página" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="400,313.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Timeout="5" Version="V4">
-                  <uix:NCheckState.IfNotExists>
-                    <Throw DisplayName="Throw - No se pudo acceder a la página" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_1">
-                      <InArgument x:TypeArguments="s:Exception">
-                        <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new Exception("No se ha podido acceder a la página de Consulta Citaciones AMT.")</CSharpValue>
-                      </InArgument>
-                    </Throw>
-                  </uix:NCheckState.IfNotExists>
-                  <uix:NCheckState.Target>
-                    <uix:TargetAnchorable BrowserURL="servicios.axiscloud.ec/AutoServicio/inicio.jsp" CVScreenId="53551b7a-abd6-4845-8d27-79e4f9088c0d" CvElementArea="27, 407, 923, 60" CvType="InputBox" DesignTimeRectangle="29, 409, 918, 56" DesignTimeScaleFactor="1.5" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl id='filtro_busqueda' tag='SELECT' type='' class='form-select input-sm' aaname='Tipo de Búsqueda:' /&gt;" Guid="9a989694-3e8c-4468-ab1c-673086998283" InformativeScreenshot="82476bfb15583a3ed9ea1491999f2c40.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Servicios en Línea' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                      <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                          <uix:Target CVScreenId="53551b7a-abd6-4845-8d27-79e4f9088c0d" CvTextArea="27, 386, 171, 22" CvTextArgument="Tipo de Busqueda:" CvType="Text" DesignTimeRectangle="29, 380, 169, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' type='' class='' aaname='' check:innerText='Tipo de Búsqueda:' /&gt;" Guid="da6c4ecd-53ae-4d1f-b3cc-f3adcb643b8a" SearchSteps="FuzzySelector, CV" />
-                        </scg:List>
-                      </uix:TargetAnchorable.Anchors>
-                    </uix:TargetAnchorable>
-                  </uix:NCheckState.Target>
-                </uix:NCheckState>
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,515.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,116.66666666666667" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V4" />
+                  <uix:NCheckState DisplayName="Check App State - Carga de página" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="416,338.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Timeout="5" Version="V4">
+                    <uix:NCheckState.IfNotExists>
+                      <Throw DisplayName="Throw - No se pudo acceder a la página" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_1">
+                        <InArgument x:TypeArguments="s:Exception">
+                          <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new Exception("No se ha podido acceder a la página de Consulta Citaciones AMT.")</CSharpValue>
+                        </InArgument>
+                      </Throw>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="servicios.axiscloud.ec/AutoServicio/inicio.jsp" CVScreenId="53551b7a-abd6-4845-8d27-79e4f9088c0d" CvElementArea="27, 407, 923, 60" CvType="InputBox" DesignTimeRectangle="29, 409, 918, 56" DesignTimeScaleFactor="1.5" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl id='filtro_busqueda' tag='SELECT' type='' class='form-select input-sm' aaname='Tipo de Búsqueda:' /&gt;" Guid="9a989694-3e8c-4468-ab1c-673086998283" InformativeScreenshot="82476bfb15583a3ed9ea1491999f2c40.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Servicios en Línea' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="53551b7a-abd6-4845-8d27-79e4f9088c0d" CvTextArea="27, 386, 171, 22" CvTextArgument="Tipo de Busqueda:" CvType="Text" DesignTimeRectangle="29, 380, 169, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl tag='LABEL' type='' class='' aaname='' check:innerText='Tipo de Búsqueda:' /&gt;" Guid="da6c4ecd-53ae-4d1f-b3cc-f3adcb643b8a" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                </Sequence>
               </ActivityAction>
             </uix:NApplicationCard.Body>
             <uix:NApplicationCard.TargetApp>
