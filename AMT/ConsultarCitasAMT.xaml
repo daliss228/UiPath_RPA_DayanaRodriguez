@@ -113,35 +113,36 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ConsultarCitasAMT" sap:VirtualizedContainerService.HintSize="1730,1966.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ConsultarCitasAMT" sap:VirtualizedContainerService.HintSize="1718,1964" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strErrorLogin" />
+      <Variable x:TypeArguments="x:Double" Default="2" Name="douDelayAfter" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - Consulando cliente" sap:VirtualizedContainerService.HintSize="1730,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+    <ui:LogMessage DisplayName="Log Message - Consulando cliente" sap:VirtualizedContainerService.HintSize="1718,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">"Consultando citaciones en la ATM..."</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser - Citas multas AMT " HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1730,1600" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser - Citas multas AMT " HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1718,1597.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Consulta" sap:VirtualizedContainerService.HintSize="1696,1348.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence DisplayName="Consulta" sap:VirtualizedContainerService.HintSize="1684,1346" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If DisplayName="If - Verificar tipo de identificación" sap:VirtualizedContainerService.HintSize="1662,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_3">
+            <If DisplayName="If - Verificar tipo de identificación" sap:VirtualizedContainerService.HintSize="1650,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">in_TipoIdentificacion.ToUpper().Trim() == "CEDULA"</CSharpValue>
@@ -212,7 +213,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Identificación" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1662,57.333333333333336" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - Identificación" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1650,57.333333333333336" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="servicios.axiscloud.ec/AutoServicio/inicio.jsp" CVScreenId="612f4c62-42ba-442f-82c2-ea7f840b0d69" CvElementArea="980, 405, 926, 63" CvType="InputBox" DesignTimeRectangle="983, 409, 918, 56" DesignTimeScaleFactor="1.5" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl id='valor_busqueda' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl id='valor_busqueda' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="3895b7c3-e447-4023-a831-c42cb8b45645" InformativeScreenshot="c5ea76527804056be9377034572f655d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Servicios en Línea' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -244,7 +245,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Buscar" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1662,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Buscar" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1650,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="servicios.axiscloud.ec/AutoServicio/inicio.jsp" CVScreenId="612f4c62-42ba-442f-82c2-ea7f840b0d69" CvElementArea="1934, 407, 113, 61" CvTextArea="1955, 429, 72, 21" CvTextArgument="Buscar" CvType="Button" DesignTimeRectangle="1937, 410, 107, 56" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl id='boton_buscar' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl id='boton_buscar' tag='BUTTON' type='' class='btn btn-primary mr-2' aaname='Buscar' check:innerText='Buscar' /&gt;" Guid="481dc839-0fc5-49f6-90f9-56ca636dfda6" InformativeScreenshot="44b17810c4b111fcf4cd01be137edcf6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Servicios en Línea' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -265,7 +266,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <Parallel DisplayName="Parallel - Verificar estados" sap:VirtualizedContainerService.HintSize="1662,1114" sap2010:WorkflowViewState.IdRef="Parallel_1">
+            <Parallel DisplayName="Parallel - Verificar estados" sap:VirtualizedContainerService.HintSize="1650,1111.3333333333333" sap2010:WorkflowViewState.IdRef="Parallel_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -359,7 +360,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NCheckState>
-              <uix:NCheckState DisplayName="Check App State - Tabla citaciones" sap:VirtualizedContainerService.HintSize="1032,1041.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Timeout="10" Version="V3">
+              <uix:NCheckState DisplayName="Check App State - Tabla citaciones" sap:VirtualizedContainerService.HintSize="1020,1041.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Timeout="10" Version="V3">
                 <uix:NCheckState.IfExists>
                   <Assign DisplayName="Assign - Target appear" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
@@ -373,74 +374,91 @@
                   </Assign>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
-                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="504,730.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:Double" Default="2" Name="douDelayAfter" />
-                    </Sequence.Variables>
+                  <ui:RetryScope DisplayName="Retry Scope - Citaciones" sap:VirtualizedContainerService.HintSize="492,478.6666666666667" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="5" RetryInterval="00:00:05">
+                    <ui:RetryScope.ActivityBody>
+                      <ActivityAction>
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,300" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data - Citaciones AMT" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total:' ReferenceIdx='0' Name='Total'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='No. Infracción Total:' ReferenceIdx='1' Name='No. Infracción'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='No. Infracción Total: Url' ReferenceIdx='2' Name='Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Boleta Total:' ReferenceIdx='3' Name='Boleta'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Placa Total:' ReferenceIdx='4' Name='Placa'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Fecha Emisión Total:' ReferenceIdx='5' Name='Fecha Emisión'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Fecha Registro Total:' ReferenceIdx='6' Name='Fecha Registro'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Fecha Vencimiento Total:' ReferenceIdx='7' Name='Fecha Vencimiento'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Artículo/Literal Total:' ReferenceIdx='8' Name='Artículo/Literal'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Puntos Total:' ReferenceIdx='9' Name='Puntos'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Valor $69.00' ReferenceIdx='10' Name='Valor'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Valor Exonerado $0.00' ReferenceIdx='11' Name='Valor Exonerado'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Multas $0.00' ReferenceIdx='12' Name='Multas'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Multa Exonerada $0.00' ReferenceIdx='13' Name='Multa Exonerada'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Interés $0.00' ReferenceIdx='14' Name='Interés'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Costas Judiciales' ReferenceIdx='15' Name='Costas Judiciales'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total $69.00' ReferenceIdx='16' Name='Total2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Pagado $0.00' ReferenceIdx='17' Name='Pagado'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Saldo $69.00' ReferenceIdx='18' Name='Saldo'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Total:' attr='fulltext' /&gt;&lt;column name='No. Infracción Total:' attr='fulltext' name2='No. Infracción Total: Url' attr2='href' /&gt;&lt;column name='Boleta Total:' attr='fulltext' /&gt;&lt;column name='Placa Total:' attr='fulltext' /&gt;&lt;column name='Fecha Emisión Total:' attr='fulltext' /&gt;&lt;column name='Fecha Registro Total:' attr='fulltext' /&gt;&lt;column name='Fecha Vencimiento Total:' attr='fulltext' /&gt;&lt;column name='Artículo/Literal Total:' attr='fulltext' /&gt;&lt;column name='Puntos Total:' attr='fulltext' /&gt;&lt;column name='Valor $69.00' attr='fulltext' /&gt;&lt;column name='Valor Exonerado $0.00' attr='fulltext' /&gt;&lt;column name='Multas $0.00' attr='fulltext' /&gt;&lt;column name='Multa Exonerada $0.00' attr='fulltext' /&gt;&lt;column name='Interés $0.00' attr='fulltext' /&gt;&lt;column name='Costas Judiciales ' attr='fulltext' /&gt;&lt;column name='Total $69.00' attr='fulltext' /&gt;&lt;column name='Pagado $0.00' attr='fulltext' /&gt;&lt;column name='Saldo $69.00' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,192" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V4">
+                            <uix:NExtractData.DataTable>
+                              <InOutArgument x:TypeArguments="sd:DataTable">
+                                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">out_dt_Citaciones</CSharpReference>
+                              </InOutArgument>
+                            </uix:NExtractData.DataTable>
+                            <uix:NExtractData.DelayBefore>
+                              <InArgument x:TypeArguments="x:Double">
+                                <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">douDelayAfter</CSharpValue>
+                              </InArgument>
+                            </uix:NExtractData.DelayBefore>
+                            <uix:NExtractData.Target>
+                              <uix:TargetAnchorable BrowserURL="https://servicios.axiscloud.ec/AutoServicio/inicio.jsp?ps_empresa=03&amp;ps_accion=P55" DesignTimeRectangle="17, 879, 3803, 169" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl id='table_inf' tag='TABLE' /&gt;" Guid="fbffd9eb-c409-42f9-b0c8-291b2631b30a" InformativeScreenshot="9cf35af612f14902ff3b1f3499928007.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Servicios en Línea' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+                            </uix:NExtractData.Target>
+                          </uix:NExtractData>
+                          <If DisplayName="If - Verificar citaciones" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="If_6">
+                            <If.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">out_dt_Citaciones == null || out_dt_Citaciones.Rows.Count == 0</CSharpValue>
+                              </InArgument>
+                            </If.Condition>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Throw DisplayName="Throw - No se encontraron citaciones" sap:VirtualizedContainerService.HintSize="434,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_11">
+                                  <InArgument x:TypeArguments="s:Exception">
+                                    <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">new Exception("No se cargaron las citaciones en la página.")</CSharpValue>
+                                  </InArgument>
+                                </Throw>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,168" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign DisplayName="Assign - Mensaje correo No Infracciones" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">
+                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">out_EmailBodyInfracciones</CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">"&lt;p&gt;Tienes las siguientes citaciones de tránsito pendientes por pagar:&lt;/p&gt;&lt;ul &gt;" + string.Join("", out_dt_Citaciones.AsEnumerable().Select(row =&gt; $"&lt;li&gt;No. Infracción: {row["No. Infracción"]}&lt;/li&gt;")) + "&lt;/ul&gt;"</CSharpValue>
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:RetryScope.ActivityBody>
+                    <ui:RetryScope.Condition>
+                      <ActivityFunc x:TypeArguments="x:Boolean" />
+                    </ui:RetryScope.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data - Citaciones AMT" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total:' ReferenceIdx='0' Name='Total'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='No. Infracción Total:' ReferenceIdx='1' Name='No. Infracción'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='No. Infracción Total: Url' ReferenceIdx='2' Name='Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Boleta Total:' ReferenceIdx='3' Name='Boleta'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Placa Total:' ReferenceIdx='4' Name='Placa'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Fecha Emisión Total:' ReferenceIdx='5' Name='Fecha Emisión'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Fecha Registro Total:' ReferenceIdx='6' Name='Fecha Registro'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Fecha Vencimiento Total:' ReferenceIdx='7' Name='Fecha Vencimiento'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Artículo/Literal Total:' ReferenceIdx='8' Name='Artículo/Literal'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Puntos Total:' ReferenceIdx='9' Name='Puntos'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Valor $69.00' ReferenceIdx='10' Name='Valor'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Valor Exonerado $0.00' ReferenceIdx='11' Name='Valor Exonerado'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Multas $0.00' ReferenceIdx='12' Name='Multas'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Multa Exonerada $0.00' ReferenceIdx='13' Name='Multa Exonerada'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Interés $0.00' ReferenceIdx='14' Name='Interés'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Costas Judiciales' ReferenceIdx='15' Name='Costas Judiciales'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total $69.00' ReferenceIdx='16' Name='Total2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Pagado $0.00' ReferenceIdx='17' Name='Pagado'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Saldo $69.00' ReferenceIdx='18' Name='Saldo'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Total:' attr='fulltext' /&gt;&lt;column name='No. Infracción Total:' attr='fulltext' name2='No. Infracción Total: Url' attr2='href' /&gt;&lt;column name='Boleta Total:' attr='fulltext' /&gt;&lt;column name='Placa Total:' attr='fulltext' /&gt;&lt;column name='Fecha Emisión Total:' attr='fulltext' /&gt;&lt;column name='Fecha Registro Total:' attr='fulltext' /&gt;&lt;column name='Fecha Vencimiento Total:' attr='fulltext' /&gt;&lt;column name='Artículo/Literal Total:' attr='fulltext' /&gt;&lt;column name='Puntos Total:' attr='fulltext' /&gt;&lt;column name='Valor $69.00' attr='fulltext' /&gt;&lt;column name='Valor Exonerado $0.00' attr='fulltext' /&gt;&lt;column name='Multas $0.00' attr='fulltext' /&gt;&lt;column name='Multa Exonerada $0.00' attr='fulltext' /&gt;&lt;column name='Interés $0.00' attr='fulltext' /&gt;&lt;column name='Costas Judiciales ' attr='fulltext' /&gt;&lt;column name='Total $69.00' attr='fulltext' /&gt;&lt;column name='Pagado $0.00' attr='fulltext' /&gt;&lt;column name='Saldo $69.00' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470,192" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="29d6fcb6-0942-41c5-b26c-b02b387573b0" Version="V4">
-                      <uix:NExtractData.DataTable>
-                        <InOutArgument x:TypeArguments="sd:DataTable">
-                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">out_dt_Citaciones</CSharpReference>
-                        </InOutArgument>
-                      </uix:NExtractData.DataTable>
-                      <uix:NExtractData.DelayBefore>
-                        <InArgument x:TypeArguments="x:Double">
-                          <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">douDelayAfter</CSharpValue>
-                        </InArgument>
-                      </uix:NExtractData.DelayBefore>
-                      <uix:NExtractData.Target>
-                        <uix:TargetAnchorable BrowserURL="https://servicios.axiscloud.ec/AutoServicio/inicio.jsp?ps_empresa=03&amp;ps_accion=P55" DesignTimeRectangle="17, 879, 3803, 169" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl id='table_inf' tag='TABLE' /&gt;" Guid="fbffd9eb-c409-42f9-b0c8-291b2631b30a" InformativeScreenshot="9cf35af612f14902ff3b1f3499928007.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Servicios en Línea' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                      </uix:NExtractData.Target>
-                    </uix:NExtractData>
-                    <If DisplayName="If - Verificar citaciones" sap:VirtualizedContainerService.HintSize="470,476" sap2010:WorkflowViewState.IdRef="If_6">
-                      <If.Condition>
-                        <InArgument x:TypeArguments="x:Boolean">
-                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">out_dt_Citaciones == null || out_dt_Citaciones.Rows.Count == 0</CSharpValue>
-                        </InArgument>
-                      </If.Condition>
-                      <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Throw DisplayName="Throw - No se encontraron citaciones" sap:VirtualizedContainerService.HintSize="434,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_11">
-                            <InArgument x:TypeArguments="s:Exception">
-                              <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">new Exception("No se cargaron las citaciones en la página.")</CSharpValue>
-                            </InArgument>
-                          </Throw>
-                        </Sequence>
-                      </If.Then>
-                      <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,168" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="Assign - Mensaje correo No Infracciones" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="Assign_5">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">
-                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">out_EmailBodyInfracciones</CSharpReference>
-                              </OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">
-                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">"&lt;p&gt;Tienes las siguientes citaciones de tránsito pendientes por pagar:&lt;/p&gt;&lt;ul &gt;" + string.Join("", out_dt_Citaciones.AsEnumerable().Select(row =&gt; $"&lt;li&gt;No. Infracción: {row["No. Infracción"]}&lt;/li&gt;")) + "&lt;/ul&gt;"</CSharpValue>
-                              </InArgument>
-                            </Assign.Value>
-                          </Assign>
-                        </Sequence>
-                      </If.Else>
-                    </If>
-                  </Sequence>
+                  </ui:RetryScope>
                 </uix:NCheckState.IfNotExists>
                 <uix:NCheckState.Target>
                   <uix:TargetAnchorable BrowserURL="servicios.axiscloud.ec/AutoServicio/inicio.jsp" CVScreenId="b7870faa-0700-4fe9-a763-60ccd1c46a3c" CvTextArea="1847, 587, 52, 21" CvTextArgument="$0.00" CvType="Text" DesignTimeRectangle="1850, 582, 50, 26" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='9' tag='STRONG' innertext='$0.00' aaname='$0.00' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_descripcion' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='STRONG' innertext='$0.00' aaname='$0.00' class='' check:text='$0.00' /&gt;" Guid="65cd6292-3a48-43db-a4d4-b38fcb3bc607" InformativeScreenshot="670f2a590523f8ff67acd04f826531a5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Servicios en Línea' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
@@ -478,7 +496,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message - Consulta exitosa" sap:VirtualizedContainerService.HintSize="1730,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+    <ui:LogMessage DisplayName="Log Message - Consulta exitosa" sap:VirtualizedContainerService.HintSize="1718,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">"Se ha consultado las citas correctamente."</CSharpValue>
